@@ -1,9 +1,9 @@
 package com.hello.user.bday.controller;
 
 import com.hello.user.bday.RestResponse;
-import com.hello.user.bday.util.Util;
 import com.hello.user.bday.model.User;
 import com.hello.user.bday.repository.UserRepository;
+import com.hello.user.bday.util.Util;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;

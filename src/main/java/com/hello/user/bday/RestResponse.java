@@ -5,14 +5,14 @@ public class RestResponse<String> {
     private Integer statusCode;
     private String message;
 
-    public RestResponse(){
+    public RestResponse() {
         super();
     }
 
-    public RestResponse(String message,Integer statusCode){
+    public RestResponse(String message, Integer statusCode) {
         super();
-        this.message=message;
-        this.statusCode=statusCode;
+        this.message = message;
+        this.statusCode = statusCode;
     }
 
     public Integer getStatusCode() {
