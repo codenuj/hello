@@ -48,6 +48,24 @@ Stop the container that you want
 
 `mvn clean package`
 
+# Server Approach
+
+# Create a S3 bucket 
+
+Create a S3 bucket to put the server-less deploy able code. S3 are unique, so choose your own bucket name. 
+
+`aws s3 mb s3://spring-hello-java-aws`
+
+# Copy code into the s3 bucket
+
+`aws s3 cp “/target/bday-0.0.1-SNAPSHOT.jar” s3://spring-hello-java-aws/`
+
+# Deploy the code in the bucket into a Cloud-formation
+
+`aws cloudformation deploy --template-file ebs.json --stack-name spring-hello-java-aws --capabilities CAPABILITY_IAM`
+
+# Server less Approach
+
 # Create a S3 bucket 
 
 Create a S3 bucket to put the server-less deploy able code. S3 are unique, so choose your own bucket name. 
@@ -71,3 +89,7 @@ Deploy the code in the bucket into a Cloud-formation, which deploys the Lambda, 
 Visit the Cloud-formation stack in your AWS account and find the link too the API in the output tab , or describe the stack through your CLI to get he output API link
 
 `aws cloudformation describe-stacks --stack-name spring-hello-java-aws`
+
+#Architecture Diagram
+
+![Architecture Diagram](src\main\resources\architecture_diagram.png?raw=true "Architecture Diagram")
