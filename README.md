@@ -90,6 +90,6 @@ Visit the Cloud-formation stack in your AWS account and find the link too the AP
 
 `aws cloudformation describe-stacks --stack-name spring-hello-java-aws`
 
-#Architecture Diagram
+# Architecture Diagram
 
-![Architecture Diagram](src\main\resources\architecture_diagram.png?raw=true "Architecture Diagram")
+![Architecture Diagram](src/main/resources/architecture_diagram.png?raw=true "Architecture Diagram")
